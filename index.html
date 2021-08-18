@@ -1,0 +1,871 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <title>National Parks Checklist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Checklist of National Park sites">
+    <meta name="author" content="Alex Moran">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="css/main.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="https://cdn.rawgit.com/andris9/jStorage/v0.4.12/jstorage.min.js"></script>	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+        var profilesKey = 'ds2_profiles';
+    </script>
+    <script src="js/main.js"></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-35576868-2', 'rejna.github.io');
+        ga('send', 'pageview');
+    </script>
+</head>
+<body>
+	<nav class="navbar navbar-default">
+    	<div class="container-fluid">
+            <div class="navbar-header">
+            	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
+	            	<span class="sr-only">Toggle navigation</span>
+	            	<span class="icon-bar"></span>
+	            	<span class="icon-bar"></span>
+	            	<span class="icon-bar"></span>
+        		</button>
+        		<a class="navbar-brand" href="#">National Park Sites Checklist</a>
+    		</div>
+    		<div class="collapse navbar-collapse" id="nav-collapse">
+	            <ul class="nav navbar-nav">
+	                <li class="active"><a href="#tabSites" data-toggle="tab">Sites</a></li>
+	                <li><a href="#tabHelp" data-toggle="tab">Help</a></li>
+	            </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div id="intro">
+            <p>
+                The following is a checklist of the 423 Nation Park Sites. It includes:
+            </p>
+            <p><em>63 US National Parks</em></p>
+            <p><em>85 US National Monuments</em></p>
+            <p><em>19 US National Preserves</em></p>
+            <p><em>59 US National Historical Parks</em></p>
+            <p><em>75 US National Historic Sites</em></p>
+            <p><em>1 US International Historic Site</em></p>
+            <p><em>4 US National Battlefield Parks</em></p>
+            <p><em>9 US National Military Parks</em></p>
+            <p><em>11 US National Battlefields</em></p>
+            <p><em>1 National Battlefield Site</em></p>
+            <p><em>32 National Memorials</em></p>
+            <p><em>18 National Recreation Areas</em></p>
+            <p><em>10 National Seashores</em></p>
+            <p><em>3 National Lake Shores</em></p>
+            <p><em>5 National Rivers</em></p>
+            <p><em>10 National Wild and Scenic Rivers and Riverways</em></p>
+            <p><em>2 National Reserves</em></p>
+            <p><em>4 National Parkways</em></p>
+            <p><em>3 National Scenic Trails</em></p>
+            <p><em>11 other sites including the National Mall and National Capital Parks</em></p>
+        </div>
+
+        <div class="tab-content">
+        	<div class="btn-group" role="group">
+		        <div class="btn-group" role="group" data-toggle="buttons">
+		          <label class="btn btn-default">
+		              <input type="checkbox" id="toggleHideCompleted" />
+		              Hide Completed
+		          </label>
+		        </div>
+	        </div>
+
+
+            <div class="tab-pane active" id="tabSites">
+
+                <h2>Checklist<span id="playthrough_overall_total"></span></h2>
+                <ul>
+                    <li><a href="#Alabama">Alabama</a><span id="playthrough_nav_totals_1"></span></li>
+                    <li><a href="#Alaska">Alaska</a><span id="playthrough_nav_totals_2"></span></li>
+                    <li><a href="#Arizona">Arizona</a><span id="playthrough_nav_totals_3"></span></li>
+                    <li><a href="#Arkansas">Arkansas</a><span id="playthrough_nav_totals_4"></span></li>
+                    <li><a href="#California">California</a><span id="playthrough_nav_totals_5"></span></li>
+                    <li><a href="#Colorado">Colorado</a><span id="playthrough_nav_totals_6"></span></li>
+                    <li><a href="#Connecticut">Connecticut</a><span id="playthrough_nav_totals_7"></span></li>
+                    <li><a href="#Delaware">Delaware</a><span id="playthrough_nav_totals_8"></span></li>
+                    <li><a href="#Florida">Florida</a><span id="playthrough_nav_totals_9"></span></li>
+                    <li><a href="#Georgia">Georgia</a><span id="playthrough_nav_totals_10"></span></li>
+                    <li><a href="#Hawaii">Hawaii</a><span id="playthrough_nav_totals_11"></span></li>
+                    <li><a href="#Idaho">Idaho</a><span id="playthrough_nav_totals_12"></span></li>
+                    <li><a href="#Illinois">Illinois</a><span id="playthrough_nav_totals_13"></span></li>
+                    <li><a href="#Indiana">Indiana</a><span id="playthrough_nav_totals_14"></span></li>
+                    <li><a href="#Iowa">Iowa</a><span id="playthrough_nav_totals_15"></span></li>
+                    <li><a href="#Kansas">Kansas</a><span id="playthrough_nav_totals_16"></span></li>
+                    <li><a href="#Kentucky">Kentucky</a><span id="playthrough_nav_totals_17"></span></li>
+                    <li><a href="#Louisiana">Louisiana</a><span id="playthrough_nav_totals_18"></span></li>
+                    <li><a href="#Maine">Maine</a><span id="playthrough_nav_totals_19"></span></li>
+                    <li><a href="#Maryland">Maryland</a><span id="playthrough_nav_totals_20"></span></li>
+                    <li><a href="#Massachusetts">Massachusetts</a><span id="playthrough_nav_totals_21"></span></li>
+                    <li><a href="#Michigan">Michigan</a><span id="playthrough_nav_totals_22"></span></li>
+                    <li><a href="#Minnesota">Minnesota</a><span id="playthrough_nav_totals_23"></span></li>
+                    <li><a href="#Mississippi">Mississippi</a><span id="playthrough_nav_totals_24"></span></li>
+                    <li><a href="#Missouri">Missouri</a><span id="playthrough_nav_totals_25"></span></li>
+                    <li><a href="#Montana">Montana</a><span id="playthrough_nav_totals_26"></span></li>
+                    <li><a href="#Nebraska">Nebraska</a><span id="playthrough_nav_totals_27"></span></li>
+                    <li><a href="#Nevada">Nevada</a><span id="playthrough_nav_totals_28"></span></li>
+                    <li><a href="#New_Hampshire">New Hampshire</a><span id="playthrough_nav_totals_29"></span></li>
+                    <li><a href="#New_Jersey">New Jersey</a><span id="playthrough_nav_totals_30"></span></li>
+                    <li><a href="#New_Mexico">New Mexico</a><span id="playthrough_nav_totals_31"></span></li>
+                    <li><a href="#New_York">New York</a><span id="playthrough_nav_totals_32"></span></li>
+                    <li><a href="#North_Carolina">North Carolina</a> <span id="playthrough_nav_totals_33"></span></li>
+                    <li><a href="#North_Dakota">North Dakota</a><span id="playthrough_nav_totals_34"></span></li>
+                    <li><a href="#Ohio">Ohio</a><span id="playthrough_nav_totals_35"></span></li>
+                    <li><a href="#Oklahoma">Oklahoma</a><span id="playthrough_nav_totals_36"></span></li>
+                    <li><a href="#Oregon">Oregon</a><span id="playthrough_nav_totals_37"></span></li>
+                    <li><a href="#Pennsylvania">Pennsylvania</a><span id="playthrough_nav_totals_38"></span></li>
+                    <li><a href="#Rhode_Island ">Rhode Island </a><span id="playthrough_nav_totals_39"></span></li>
+                    <li><a href="#South_Carolina">South Carolina</a><span id="playthrough_nav_totals_40"></span></li>
+                    <li><a href="#South_Dakota">South Dakota</a><span id="playthrough_nav_totals_41"></span></li>
+                    <li><a href="#Tennessee">Tennessee</a><span id="playthrough_nav_totals_42"></span></li>
+                    <li><a href="#Texas">Texas</a><span id="playthrough_nav_totals_43"></span></li>
+                    <li><a href="#Utah">Utah</a><span id="playthrough_nav_totals_44"></span></li>
+                    <li><a href="#Vermont">Vermont</a><span id="playthrough_nav_totals_45"></span></li>
+                    <li><a href="#Virginia">Virginia</a><span id="playthrough_nav_totals_46"></span></li>
+                    <li><a href="#Washington">Washington</a><span id="playthrough_nav_totals_47"></span></li>
+                    <li><a href="#Washington_DC">Washington DC</a><span id="playthrough_nav_totals_48"></span></li>
+                    <li><a href="#West_Virginia">West Virginia</a><span id="playthrough_nav_totals_49"></span></li>
+                    <li><a href="#Wisconsin">Wisconsin</a><span id="playthrough_nav_totals_50"></span></li>
+                    <li><a href="#Wyoming">Wyoming</a><span id="playthrough_nav_totals_51"></span></li>
+                    <li><a href="#American_Samoa">American Samoa</a><span id="playthrough_nav_totals_52"></span></li>
+                    <li><a href="#Guam">Guam</a><span id="playthrough_nav_totals_53"></span></li>
+                    <li><a href="#Puerto_Rico">Puerto Rico</a><span id="playthrough_nav_totals_54"></span></li>
+                    <li><a href="#Virgin_Islands">Virgin Islands</a><span id="playthrough_nav_totals_55"></span></li>
+
+                </ul>
+
+                <hr />
+
+                <a name="Alabama"></a>
+                <h3>Alabama  <span id="playthrough_totals_1"></span></h3>
+                <ul>
+                    <li data-id="playthrough_1_1">Birmingham Civil Rights National Monument</li>
+                    <li data-id="playthrough_1_2">Freedom Riders National Monument</li>
+                    <li data-id="playthrough_1_3">Horseshoe Bend National Military Park</li>
+                    <li data-id="playthrough_1_4">Little River Canyon National Preserve</li>
+                    <li data-id="playthrough_1_5">Russell Cave National Monument </li>
+                    <li data-id="playthrough_1_6">Tuskegee Airmen National Historic Site</li>
+                    <li data-id="playthrough_1_7">Tuskegee Institute National Historic Site</li>
+                </ul>
+
+                <a name="Alaska"></a>
+                <h3>Alabama <span id="playthrough_totals_2"></span></h3>
+                <ul>
+                    <li data-id="playthrough_2_1">Alagnak Wild River</li>
+                    <li data-id="playthrough_2_2">Aniakchak National Monument</li>
+                    <li data-id="playthrough_2_3">Aniakchak National Preserve</li>
+                    <li data-id="playthrough_2_4">Bering Land Bridge National Preserve</li>
+                    <li data-id="playthrough_2_5">Cape Krusenstern National Monument</li>
+                    <li data-id="playthrough_2_6">Denali National Park</li>
+                    <li data-id="playthrough_2_7">Denali National Preserve</li>
+                    <li data-id="playthrough_2_8">Gates of the Arctic National Park</li>
+                    <li data-id="playthrough_2_9">Gates of the Arctic National Preserve </li>
+                    <li data-id="playthrough_2_10">Glacier Bay National Park</li>
+                    <li data-id="playthrough_2_11">Glacier Bay National Preserve</li>
+                    <li data-id="playthrough_2_12">Katmai National Park</li>
+                    <li data-id="playthrough_2_13">Katmai National Preserve</li>
+                    <li data-id="playthrough_2_14">Kenai Fjords National Park</li>
+                    <li data-id="playthrough_2_15">Klondike Gold Rush National Historical Park</li>
+                    <li data-id="playthrough_2_16">Kobuk Valley National Park</li>
+                    <li data-id="playthrough_2_17">Lake Clark National Park</li>
+                    <li data-id="playthrough_2_18">Lake Clark National Preserve</li>
+                    <li data-id="playthrough_2_19">Noatak National Preserve</li>
+                    <li data-id="playthrough_2_20">Sitka National Historical Park</li>
+                    <li data-id="playthrough_2_21">Wrangell-St. Elias National Park</li>
+                    <li data-id="playthrough_2_22">Wrangell-St. Elias National Preserve</li>
+                    <li data-id="playthrough_2_23">Yukon-Charley Rivers National Preserve</li>
+                </ul>
+
+                <a name="Arizona"></a>
+                <h3>Arizona <span id="playthrough_totals_3"></span></h3>
+                <ul>
+                    <li data-id="playthrough_3_1">Canyon De Chelly National Monument</li>
+                    <li data-id="playthrough_3_2">Casa Grande Ruins National Monument</li>
+                    <li data-id="playthrough_3_3">Chiricahua National Monument</li>
+                    <li data-id="playthrough_3_4">Coronado National Memorial</li>
+                    <li data-id="playthrough_3_5">Fort Bowie National Historic Site</li>
+                    <li data-id="playthrough_3_6">Glen Canyon National Recreation Area</li>
+                    <li data-id="playthrough_3_7">Grand Canyon National Park</li>
+                    <li data-id="playthrough_3_8">Hohokam Pima National Monument</li>
+                    <li data-id="playthrough_3_9">Hubbell Trading Post National Historic Site</li>
+                    <li data-id="playthrough_3_10">Montezuma Castle National Monument</li>
+                    <li data-id="playthrough_3_11">Navajo National Monument</li>
+                    <li data-id="playthrough_3_12">Organ Pipe Cactus National Monument</li>
+                    <li data-id="playthrough_3_13">Petrified Forest National Park</li>
+                    <li data-id="playthrough_3_14">Pipe Spring National Monument</li>
+                    <li data-id="playthrough_3_15">Saguaro National Park</li>
+                    <li data-id="playthrough_3_16">Sunset Crater Volcano National Monument</li>
+                    <li data-id="playthrough_3_17">Tonto National Monument</li>
+                    <li data-id="playthrough_3_18">Tumacacori National Historical Park</li>
+                    <li data-id="playthrough_3_19">Tuzigoot National Monument</li>
+                    <li data-id="playthrough_3_20">Walnut Canyon National Monument</li>
+                    <li data-id="playthrough_3_21">Wupatki National Monument</li>
+                </ul>
+
+                <a name="Arkansas"></a>
+                <h3>Arkansas <span id="playthrough_totals_4"></span></h3>
+                <ul>
+                    <li data-id="playthrough_4_1">Arkansas Post National Memorial</li>
+                    <li data-id="playthrough_4_2">Buffalo National River</li>
+                    <li data-id="playthrough_4_3">Fort Smith National Historic Site</li>
+                    <li data-id="playthrough_4_4">Hot Springs National Park</li>
+                    <li data-id="playthrough_4_5">Little Rock Central High School National Historic Site</li>
+                    <li data-id="playthrough_4_6">Pea Ridge National Military Park</li>
+                    <li data-id="playthrough_4_7">President William Jefferson Clinton Birthplace Home National Historic Site</li>
+                </ul>
+
+                <a name="California"></a>
+                <h3>California <span id="playthrough_totals_5"></span></h3>
+                <ul>
+                    <li data-id="playthrough_5_1">Cabrillo National Monument</li>
+                    <li data-id="playthrough_5_2">Castle Mountains National Monument</li>
+                    <li data-id="playthrough_5_3">César E. Chávez National Monument</li>
+                    <li data-id="playthrough_5_4">Channel Islands National Park</li>
+                    <li data-id="playthrough_5_5">Death Valley National Park (also Nevada)</li>
+                    <li data-id="playthrough_5_6">Devils Postpile National Monument</li>
+                    <li data-id="playthrough_5_7">Eugene O’Neill National Historic Site</li>
+                    <li data-id="playthrough_5_8">Fort Point National Historic Site</li>
+                    <li data-id="playthrough_5_9">Golden Gate National Recreational Area</li>
+                    <li data-id="playthrough_5_10">John Muir National Historic Site</li>
+                    <li data-id="playthrough_5_11">Joshua Tree National Park</li>
+                    <li data-id="playthrough_5_12">Kings Canyon National Park</li>
+                    <li data-id="playthrough_5_13">Lassen Volcanic National Park</li>
+                    <li data-id="playthrough_5_14">Lava Beds National Monument</li>
+                    <li data-id="playthrough_5_15">Manzanar National Historic Site</li>
+                    <li data-id="playthrough_5_16">Mojave National Preserve</li>
+                    <li data-id="playthrough_5_17">Muir Woods National Monument</li>
+                    <li data-id="playthrough_5_18">Pinnacles National Park</li>
+                    <li data-id="playthrough_5_19">Point Reyes National Seashore</li>
+                    <li data-id="playthrough_5_20">Port Chicago Naval Magazine National Memorial</li>
+                    <li data-id="playthrough_5_21">Redwood National Park</li>
+                    <li data-id="playthrough_5_22">Rosie the Riveter / World War II Home Front National Historic Park</li>
+                    <li data-id="playthrough_5_23">San Francisco Maritime National Historical Park</li>
+                    <li data-id="playthrough_5_24">Santa Monica Mountains National Recreation Area</li>
+                    <li data-id="playthrough_5_25">Sequoia National Park</li>
+                    <li data-id="playthrough_5_26">Tule Lake National Monument</li>
+                    <li data-id="playthrough_5_27">Whiskeytown-Shasta-Trinity National Recreation Area</li>
+                    <li data-id="playthrough_5_28">Yosemite National Park</li>
+                </ul>
+
+                <a name="Colorado"></a>
+                <h3>Colorado <span id="playthrough_totals_6"></span></h3>
+                <ul>
+                    <li data-id="playthrough_6_1">Bent’s Old Fort National Historic Site</li>
+                    <li data-id="playthrough_6_2">Black Canyon of the Gunnison National Park</li>
+                    <li data-id="playthrough_6_3">Colorado National Monument</li>
+                    <li data-id="playthrough_6_4">Currecanti National Recreation Area</li>
+                    <li data-id="playthrough_6_5">Dinosaur National Monument (also Utah)</li>
+                    <li data-id="playthrough_6_6">Florissant Fossil Beds National Monument</li>
+                    <li data-id="playthrough_6_7">Great Sand Dunes National Park</li>
+                    <li data-id="playthrough_6_8">Great Sand Dunes National Preserve</li>
+                    <li data-id="playthrough_6_9">Hovenweep National Monument</li>
+                    <li data-id="playthrough_6_10">Mesa Verde National Park</li>
+                    <li data-id="playthrough_6_11">Rocky Mountain National Park</li>
+                    <li data-id="playthrough_6_12">Sand Creek Massacre National Historic Site </li>
+                    <li data-id="playthrough_6_13">Yucca House National Monument</li>
+                </ul>
+
+                <a name="Connecticut"></a>
+                <h3>Connecticut <span id="playthrough_totals_7"></span></h3>
+                <ul>
+                    <li data-id="playthrough_7_1">Weir Farm National Historic Site</li>
+                </ul>
+
+                <a name="Delaware"></a>
+                <h3>Delaware <span id="playthrough_totals_8"></span></h3>
+                <ul>
+                    <li data-id="playthrough_8_1">First State National Historical Park</li>
+                </ul>
+
+                <a name="Florida"></a>
+                <h3>Florida <span id="playthrough_totals_9"></span></h3>
+                <ul>
+                    <li data-id="playthrough_9_1">Big Cypress National Preserve</li>
+                    <li data-id="playthrough_9_2">Biscayne National Park</li>
+                    <li data-id="playthrough_9_3">Canaveral National Seashore</li>
+                    <li data-id="playthrough_9_4">Castillo de San Marcos National Monument</li>
+                    <li data-id="playthrough_9_5">De Soto National Memorial</li>
+                    <li data-id="playthrough_9_6">Dry Tortugas National Park</li>
+                    <li data-id="playthrough_9_7">Everglades National Park</li>
+                    <li data-id="playthrough_9_8">Fort Caroline National Memorial</li>
+                    <li data-id="playthrough_9_9">Fort Matanzas National Monument</li>
+                    <li data-id="playthrough_9_10">Gulf Islands National Seashore (also Mississippi)</li>
+                    <li data-id="playthrough_9_11">Timucuan Ecological and Historic Preserve</li>
+                </ul>
+
+                <a name="Georgia"></a>
+                <h3>Georgia <span id="playthrough_totals_10"></span></h3>
+                <ul>
+                    <li data-id="playthrough_10_1">Appalachian National Scenic Trail (Georgia to Maine)</li>
+                    <li data-id="playthrough_10_2">Andersonville National Historic Site</li>
+                    <li data-id="playthrough_10_3">Chattahoochee River National Recreation Area</li>
+                    <li data-id="playthrough_10_4">Chickamauga and Chattanooga National Military Park (also Tennessee)</li>
+                    <li data-id="playthrough_10_5">Cumberland Island National Seashore</li>
+                    <li data-id="playthrough_10_6">Fort Frederica National Monument</li>
+                    <li data-id="playthrough_10_7">Fort Pulaski National Monument</li>
+                    <li data-id="playthrough_10_8">Jimmy Carter National Historic Site</li>
+                    <li data-id="playthrough_10_9">Kennesaw Mountain National Battlefield Park</li>
+                    <li data-id="playthrough_10_10">Martin Luther King Jr National Historic Site</li>
+                    <li data-id="playthrough_10_11">Ocmulgee National Monument</li>
+                </ul>
+
+                <a name="Hawaii"></a>
+                <h3>Hawaii <span id="playthrough_totals_11"></span></h3>
+                <ul>
+                    <li data-id="playthrough_11_1">Haleakala National Park</li>
+                    <li data-id="playthrough_11_2">Hawaii Volcanoes National Park</li>
+                    <li data-id="playthrough_11_3">Honouliuli National Monument</li>
+                    <li data-id="playthrough_11_4">Kalaupapa National Historical Park</li>
+                    <li data-id="playthrough_11_5">Kaloko-Honokohau National Historical Park</li>
+                    <li data-id="playthrough_11_6">Pearl Harbor National Monument</li>
+                    <li data-id="playthrough_11_7">Pu’uhonua O Honaunau National Historical Park</li>
+                    <li data-id="playthrough_11_8">Pu’ukohola Heiau National Historic Site</li>
+                </ul>
+
+                <a name="Idaho"></a>
+                <h3>Idaho <span id="playthrough_totals_12"></span></h3>
+                <ul>
+                    <li data-id="playthrough_12_1">City of Rocks National Reserve</li>
+                    <li data-id="playthrough_12_2">Craters of the Moon National Monument</li>
+                    <li data-id="playthrough_12_3">Craters of the Moon National Preserve</li>
+                    <li data-id="playthrough_12_4">Hagerman Fossil Beds National Monument</li>
+                    <li data-id="playthrough_12_5">Minidoka National Historic Site</li>
+                    <li data-id="playthrough_12_6">Nez Perce National Historical Park </li>
+                </ul>
+
+                <a name="Illinois"></a>
+                <h3>Illinois <span id="playthrough_totals_13"></span></h3>
+                <ul>
+                    <li data-id="playthrough_13_1">Lincoln Home National Historic Site</li>
+                    <li data-id="playthrough_13_2">Pullman National Monument</li>
+                </ul>
+
+                <a name="Indiana"></a>
+                <h3>Indiana <span id="playthrough_totals_14"></span></h3>
+                <ul>
+                    <li data-id="playthrough_14_1">George Rogers Clark National Historical Park</li>
+                    <li data-id="playthrough_14_2">Indiana Dunes National Park</li>
+                    <li data-id="playthrough_14_3">Lincoln Boyhood National Memorial</li>
+                </ul>
+
+                <a name="Iowa"></a>
+                <h3>Iowa <span id="playthrough_totals_15"></span></h3>
+                <ul>
+                    <li data-id="playthrough_15_1">Effigy Mounds National Monument</li>
+                    <li data-id="playthrough_15_2">Herbert Hoover National Historic Site</li>
+                </ul>
+
+                <a name="Kansas"></a>
+                <h3>Kansas <span id="playthrough_totals_16"></span></h3>
+                <ul>
+                    <li data-id="playthrough_16_1">Brown vs. Board of Education National Historic Site</li>
+                    <li data-id="playthrough_16_2">Fort Larned National Historic Site</li>
+                    <li data-id="playthrough_16_3">Fort Scott National Historic Site</li>
+                    <li data-id="playthrough_16_4">Nicodemus National Historic Site</li>
+                    <li data-id="playthrough_16_5">Tallgrass Prairie National Preserve</li>
+                </ul>
+
+                <a name="Kentucky"></a>
+                <h3>Kentucky <span id="playthrough_totals_17"></span></h3>
+                <ul>
+                    <li data-id="playthrough_17_1">Abraham Lincoln Birthplace National Historical Park</li>
+                    <li data-id="playthrough_17_2">Camp Nelson National Monument</li>
+                    <li data-id="playthrough_17_3">Cumberland Gap National Historical Park (also Tennessee, Virginia)</li>
+                    <li data-id="playthrough_17_4">Mammoth Cave National Park</li>
+                    <li data-id="playthrough_17_5">Mill Springs Battlefield National Monument</li>
+                </ul>
+
+                <a name="Louisiana"></a>
+                <h3>Louisiana <span id="playthrough_totals_18"></span></h3>
+                <ul>
+                    <li data-id="playthrough_18_1">Cane River Creole National Historical Park</li>
+                    <li data-id="playthrough_18_2">Jean Lafitte National Historical Park and Preserve</li>
+                    <li data-id="playthrough_18_3">New Orleans Jazz National Historical Park</li>
+                    <li data-id="playthrough_18_4">Poverty Point National Monument</li>
+                </ul>
+
+                <a name="Maine"></a>
+                <h3>Maine <span id="playthrough_totals_19"></span></h3>
+                <ul>
+                    <li data-id="playthrough_19_1">Acadia National Park</li>
+                    <li data-id="playthrough_19_2">Katahdin Woods and Waters National Monument</li>
+                    <li data-id="playthrough_19_3">Saint Croix Island International Historic Site</li>
+                </ul>
+
+                <a name="Maryland"></a>
+                <h3>Maryland <span id="playthrough_totals_20"></span></h3>
+                <ul>
+                    <li data-id="playthrough_20_1">Antietam National Battlefield</li>
+                    <li data-id="playthrough_20_2">Assateague Island National Seashore (also Virginia)</li>
+                    <li data-id="playthrough_20_3">Catoctin Mountain Park</li>
+                    <li data-id="playthrough_20_4">C & O Canal National Historical Park (also Washington DC)</li>
+                    <li data-id="playthrough_20_5">Clara Barton National Historic Site</li>
+                    <li data-id="playthrough_20_6">Fort McHenry National Monument and Historic Shrine</li>
+                    <li data-id="playthrough_20_7">Fort Washington Park</li>
+                    <li data-id="playthrough_20_8">Greenbelt Park</li>
+                    <li data-id="playthrough_20_9">Hampton National Historic Site</li>
+                    <li data-id="playthrough_20_10">Harriet Tubman Underground Railroad National Historical Park</li>
+                    <li data-id="playthrough_20_11">Monocacy National Battlefield</li>
+                    <li data-id="playthrough_20_12">Piscataway Park</li>
+                    <li data-id="playthrough_20_13">Potomac Heritage National Scenic Trail</li>
+                    <li data-id="playthrough_20_14">Thomas Stone National Historic Site</li>
+                </ul>
+
+                <a name="Massachusetts"></a>
+                <h3>Massachusetts <span id="playthrough_totals_21"></span></h3>
+                <ul>
+                    <li data-id="playthrough_21_1">Adams National Historical Park</li>
+                    <li data-id="playthrough_21_2">Boston African American National Historic Site</li>
+                    <li data-id="playthrough_21_3">Boston Harbor Islands National Recreation Area</li>
+                    <li data-id="playthrough_21_4">Boston National Historical Park</li>
+                    <li data-id="playthrough_21_5">Cape Cod National Seashore</li>
+                    <li data-id="playthrough_21_6">Frederick Law Olmsted National Historic Site</li>
+                    <li data-id="playthrough_21_7">John F. Kennedy National Historic Site</li>
+                    <li data-id="playthrough_21_8">Longfellow House-Washington’s Headquarters National Historic Site</li>
+                    <li data-id="playthrough_21_9">Lowell National Historical Park</li>
+                    <li data-id="playthrough_21_10">Minute Man National Historical Park</li>
+                    <li data-id="playthrough_21_11">New Bedford Whaling National Historical Park</li>
+                    <li data-id="playthrough_21_12">Salem Maritime National Historic Site</li>
+                    <li data-id="playthrough_21_13">Saugus Iron Works National Historic Site</li>
+                    <li data-id="playthrough_21_14">Springfield Armory National Historic Site</li>
+                </ul>
+
+                <a name="Michigan"></a>
+                <h3>Michigan <span id="playthrough_totals_22"></span></h3>
+                <ul>
+                    <li data-id="playthrough_22_1">Isle Royale National Park</li>
+                    <li data-id="playthrough_22_2">Keweenaw National Historical Park</li>
+                    <li data-id="playthrough_22_3">Pictured Rocks National Lakeshore</li>
+                    <li data-id="playthrough_22_4">River Raisin National Battlefield Park</li>
+                    <li data-id="playthrough_22_5">Sleeping Bear Dunes National Lakeshore</li>
+                </ul>
+
+                <a name="Minnesota"></a>
+                <h3>Minnesota <span id="playthrough_totals_23"></span></h3>
+                <ul>
+                    <li data-id="playthrough_23_1">Grand Portage National Monument</li>
+                    <li data-id="playthrough_23_2">Mississippi National River and Recreation Area</li>
+                    <li data-id="playthrough_23_3">Pipestone National Monument</li>
+                    <li data-id="playthrough_23_4">Voyageurs National Park</li>
+                </ul>
+
+                <a name="Mississippi"></a>
+                <h3>Mississippi <span id="playthrough_totals_24"></span></h3>
+                <ul>
+                    <li data-id="playthrough_24_1">Brices Cross Roads National Battlefield Site</li>
+                    <li data-id="playthrough_24_2">Medgar and Myrlie Evers Home National Monument</li>
+                    <li data-id="playthrough_24_3">Natchez National Historical Park</li>
+                    <li data-id="playthrough_24_4">Natchez Trace Parkway (also Alabama, Tennessee)</li>
+                    <li data-id="playthrough_24_5">Natchez Trace National Trail (also Alabama, Tennessee)</li>
+                    <li data-id="playthrough_24_6">Tupelo National Battlefield</li>
+                    <li data-id="playthrough_24_7">Vicksburg National Military Park (also Louisiana) </li>
+                </ul>
+
+                <a name="Missouri"></a>
+                <h3>Missouri <span id="playthrough_totals_25"></span></h3>
+                <ul>
+                    <li data-id="playthrough_25_1">Gateway Arch National Park</li>
+                    <li data-id="playthrough_25_2">George Washington Carver National Monument</li>
+                    <li data-id="playthrough_25_3">Harry S Truman National Historic Site</li>
+                    <li data-id="playthrough_25_4">Ozark National Scenic Riverways</li>
+                    <li data-id="playthrough_25_5">Ste. Genevieve National Historical Park</li>
+                    <li data-id="playthrough_25_6">Ulysses S. Grant National Historic Site</li>
+                    <li data-id="playthrough_25_7">Wilson’s Creek National Battlefield</li>
+                </ul>
+
+                <a name="Montana"></a>
+                <h3>Montana <span id="playthrough_totals_26"></span></h3>
+                <ul>
+                    <li data-id="playthrough_26_1">Big Hole National Battlefield</li>
+                    <li data-id="playthrough_26_2">Bighorn Canyon National Recreation Area</li>
+                    <li data-id="playthrough_26_3">Glacier National Park</li>
+                    <li data-id="playthrough_26_4">Grant-Kohrs Ranch National Historic Site</li>
+                    <li data-id="playthrough_26_5">Little Bighorn Battlefield National Monument</li>
+                </ul>
+
+                <a name="Nebraska"></a>
+                <h3>Nebraska <span id="playthrough_totals_27"></span></h3>
+                <ul>
+                    <li data-id="playthrough_27_1">Agate Fossil Beds National Monument</li>
+                    <li data-id="playthrough_27_2">Homestead National Monument of America</li>
+                    <li data-id="playthrough_27_3">Missouri National Recreational River (also South Dakota)</li>
+                    <li data-id="playthrough_27_4">Niobrara National Scenic River</li>
+                    <li data-id="playthrough_27_5">Scotts Bluff National Monument</li>
+                </ul>
+
+                <a name="Nevada"></a>
+                <h3>Nevada <span id="playthrough_totals_28"></span></h3>
+                <ul>
+                    <li data-id="playthrough_28_1">Great Basin National Park</li>
+                    <li data-id="playthrough_28_2">Lake Mead National Recreation Area (also Arizona)</li>
+                    <li data-id="playthrough_28_3">Tule Springs Fossil Beds National Monument</li>
+                </ul>
+
+                <a name="New_Hampshire"></a>
+                <h3>New Hampshire <span id="playthrough_totals_29"></span></h3>
+                <ul>
+                    <li data-id="playthrough_29_1">Saint-Gaudens National Historic Site</li>
+                </ul>
+
+                <a name="New_Jersey"></a>
+                <h3>New Jersey <span id="playthrough_totals_30"></span></h3>
+                <ul>
+                    <li data-id="playthrough_30_1">Great Egg Harbor Scenic and Recreational River</li>
+                    <li data-id="playthrough_30_2">Morristown National Historical Park</li>
+                    <li data-id="playthrough_30_3">Paterson Great Falls National Historical Park</li>
+                    <li data-id="playthrough_30_4">Thomas Edison National Historical Park</li>
+                </ul>
+
+                <a name="New_Mexico"></a>
+                <h3>New Mexico <span id="playthrough_totals_31"></span></h3>
+                <ul>
+                    <li data-id="playthrough_31_1">Aztec Ruins National Monument</li>
+                    <li data-id="playthrough_31_2">Bandelier National Monument</li>
+                    <li data-id="playthrough_31_3">Capulin Volcano National Monument</li>
+                    <li data-id="playthrough_31_4">Carlsbad Caverns National Park</li>
+                    <li data-id="playthrough_31_5">Chaco Culture National Historical Park</li>
+                    <li data-id="playthrough_31_6">El Malpais National Monument</li>
+                    <li data-id="playthrough_31_7">El Morro National Monument</li>
+                    <li data-id="playthrough_31_8">Fort Union National Monument</li>
+                    <li data-id="playthrough_31_9">Gila Cliff Dwellings National Monument</li>
+                    <li data-id="playthrough_31_10">Manhattan Project National Historical Park (also Tennessee, Washington)</li>
+                    <li data-id="playthrough_31_11">Pecos National Historical Park</li>
+                    <li data-id="playthrough_31_12">Petroglyph National Monument</li>
+                    <li data-id="playthrough_31_13">Salinas Pueblo Missions National Monument</li>
+                    <li data-id="playthrough_31_14">Valles Caldera National Preserve</li>
+                    <li data-id="playthrough_31_15">White Sands National Park</li>
+                </ul>
+
+                <a name="New_York"></a>
+                <h3>New York <span id="playthrough_totals_32"></span></h3>
+                <ul>
+                    <li data-id="playthrough_32_1">African Burial Ground National Monument</li>
+                    <li data-id="playthrough_32_2">Castle Clinton National Monument</li>
+                    <li data-id="playthrough_32_3">Eleanor Roosevelt National Historic Site</li>
+                    <li data-id="playthrough_32_4">Federal Hall National Memorial</li>
+                    <li data-id="playthrough_32_5">Fire Island National Seashore</li>
+                    <li data-id="playthrough_32_6">Fort Stanwix National Monument</li>
+                    <li data-id="playthrough_32_7">Gateway National Recreation Area</li>
+                    <li data-id="playthrough_32_8">General Grant National Memorial</li>
+                    <li data-id="playthrough_32_9">Governors Island National Monument</li>
+                    <li data-id="playthrough_32_10">Hamilton Grange National Memorial</li>
+                    <li data-id="playthrough_32_11">Harriet Tubman National Historical Park</li>
+                    <li data-id="playthrough_32_12">Home of Franklin D. Roosevelt National Historic Site</li>
+                    <li data-id="playthrough_32_13">Martin Van Buren National Historic Site</li>
+                    <li data-id="playthrough_32_14">Saint Paul’s Church National Historic Site</li>
+                    <li data-id="playthrough_32_15">Sagamore Hill National Historic Site</li>
+                    <li data-id="playthrough_32_16">Saratoga National Historical Park</li>
+                    <li data-id="playthrough_32_17">Statue of Liberty National Monument</li>
+                    <li data-id="playthrough_32_18">Stonewall National Monument</li>
+                    <li data-id="playthrough_32_19">Theodore Roosevelt Birthplace National Historic Site</li>
+                    <li data-id="playthrough_32_20">Theodore Roosevelt Inaugural National Historic Site</li>
+                    <li data-id="playthrough_32_21">Vanderbilt Mansion National Historic Site</li>
+                    <li data-id="playthrough_32_22">Women’s Rights National Historical Park</li>
+                </ul>
+
+                <a name="North_Carolina"></a>
+                <h3>North Carolina <span id="playthrough_totals_33"></span></h3>
+                <ul>
+                    <li data-id="playthrough_33_1">Blue Ridge Parkway (also Virginia)</li>
+                    <li data-id="playthrough_33_2">Cape Hatteras National Seashore</li>
+                    <li data-id="playthrough_33_3">Cape Lookout National Seashore</li>
+                    <li data-id="playthrough_33_4">Carl Sandburg Home National Historic Site</li>
+                    <li data-id="playthrough_33_5">Fort Raleigh National Historic Site</li>
+                    <li data-id="playthrough_33_6">Guilford Courthouse National Military Park</li>
+                    <li data-id="playthrough_33_7">Moores Creek National Battlefield</li>
+                    <li data-id="playthrough_33_8">Wright Brothers National Memorial</li>
+                </ul>
+
+                <a name="North_Dakota"></a>
+                <h3>North Dakota <span id="playthrough_totals_34"></span></h3>
+                <ul>
+                    <li data-id="playthrough_34_1">Fort Union Trading Post National Historic Site (also Montana)</li>
+                    <li data-id="playthrough_34_2">Knife River Indian Villages National Historic Site</li>
+                    <li data-id="playthrough_34_3">Theodore Roosevelt National Park</li>
+                </ul>
+
+                <a name="Ohio"></a>
+                <h3>Ohio <span id="playthrough_totals_35"></span></h3>
+                <ul>
+                    <li data-id="playthrough_35_1">Charles Young Buffalo Soldiers National Monument</li>
+                    <li data-id="playthrough_35_2">Cuyahoga Valley National Park</li>
+                    <li data-id="playthrough_35_3">Dayton Aviation Heritage National Historical Park</li>
+                    <li data-id="playthrough_35_4">First Ladies National Historic Site</li>
+                    <li data-id="playthrough_35_5">Hopewell Culture National Historical Park</li>
+                    <li data-id="playthrough_35_6">James A. Garfield National Historic Site</li>
+                    <li data-id="playthrough_35_7">Perry’s Victory and International Peace Memorial</li>
+                    <li data-id="playthrough_35_8">William Howard Taft National Historic Site</li>
+                </ul>
+
+                <a name="Oklahoma"></a>
+                <h3>Oklahoma <span id="playthrough_totals_36"></span></h3>
+                <ul>
+                    <li data-id="playthrough_36_1">Chickasaw National Recreation Area</li>
+                    <li data-id="playthrough_36_2">Washita Battlefield National Historic Site</li>
+                </ul>
+
+                <a name="Oregon"></a>
+                <h3>Oregon <span id="playthrough_totals_37"></span></h3>
+                <ul>
+                    <li data-id="playthrough_37_1">Crater Lake National Park</li>
+                    <li data-id="playthrough_37_2">Lewis and Clark National Historical Park (also Washington)</li>
+                    <li data-id="playthrough_37_3">John Day Fossil Beds National Monument</li>
+                    <li data-id="playthrough_37_4">Oregon Caves National Monument and Preserve</li>
+                </ul>
+
+                <a name="Pennsylvania"></a>
+                <h3>Pennsylvania <span id="playthrough_totals_38"></span></h3>
+                <ul>
+                    <li data-id="playthrough_38_1">Allegheny Portage Railroad National Historic Site</li>
+                    <li data-id="playthrough_38_2">Delaware Water Gap National Recreation Area</li>
+                    <li data-id="playthrough_38_3">Edgar Allen Poe National Historic Site</li>
+                    <li data-id="playthrough_38_4">Eisenhower National Historic Site</li>
+                    <li data-id="playthrough_38_5">Flight 93 National Memorial</li>
+                    <li data-id="playthrough_38_6">Fort Necessity National Battlefield</li>
+                    <li data-id="playthrough_38_7">Friendship Hill National Historic Site</li>
+                    <li data-id="playthrough_38_8">Gettysburg National Military Park</li>
+                    <li data-id="playthrough_38_9">Hopewell Furnace National Historic Site</li>
+                    <li data-id="playthrough_38_10">Independence National Historical Park</li>
+                    <li data-id="playthrough_38_11">Johnstown Flood National Memorial</li>
+                    <li data-id="playthrough_38_12">Middle Delaware National Scenic River</li>
+                    <li data-id="playthrough_38_13">Steamtown National Historic Site</li>
+                    <li data-id="playthrough_38_14">Thaddeus Kosciuszko National Memorial</li>
+                    <li data-id="playthrough_38_15">Upper Delaware Scenic and Recreational River</li>
+                    <li data-id="playthrough_38_16">Valley Forge National Historical Park</li>
+                </ul>
+
+                <a name="Rhode_Island"></a>
+                <h3>Rhode Island <span id="playthrough_totals_39"></span></h3>
+                <ul>
+                    <li data-id="playthrough_39_1">Blackstone River Valley National Historical Park (also Massachusetts)</li>
+                    <li data-id="playthrough_39_2">Roger Williams National Memorial</li>
+                </ul>
+
+                <a name="South_Carolina"></a>
+                <h3>South Carolina <span id="playthrough_totals_40"></span></h3>
+                <ul>
+                    <li data-id="playthrough_40_1">Charles Pinckney National Historic Site</li>
+                    <li data-id="playthrough_40_2">Congaree National Park</li>
+                    <li data-id="playthrough_40_3">Cowpens National Battlefield</li>
+                    <li data-id="playthrough_40_4">Fort Sumter National Monument</li>
+                    <li data-id="playthrough_40_5">Kings Mountain National Military Park</li>
+                    <li data-id="playthrough_40_6">Ninety-Six National Historic Site</li>
+                    <li data-id="playthrough_40_7">Reconstruction Era National Monument</li>
+                </ul>
+
+                <a name="South_Dakota"></a>
+                <h3>South Dakota <span id="playthrough_totals_41"></span></h3>
+                <ul>
+                    <li data-id="playthrough_41_1">Badlands National Park</li>
+                    <li data-id="playthrough_41_2">Jewel Cave National Monument</li>
+                    <li data-id="playthrough_41_3">Minuteman Missile National Historic Site</li>
+                    <li data-id="playthrough_41_4">Mount Rushmore National Memorial</li>
+                    <li data-id="playthrough_41_5">Wind Cave National Park</li>
+                </ul>
+
+                <a name="Tennessee"></a>
+                <h3>Tennessee <span id="playthrough_totals_42"></span></h3>
+                <ul>
+                    <li data-id="playthrough_42_1">Andrew Johnson National Historic Site</li>
+                    <li data-id="playthrough_42_2">Big South Fork National River and Recreation Area (also Kentucky)</li>
+                    <li data-id="playthrough_42_3">Fort Donelson National Battlefield (also Kentucky)</li>
+                    <li data-id="playthrough_42_4">Great Smokey Mountains National Park (also North Carolina)</li>
+                    <li data-id="playthrough_42_5">Obed Wild and Scenic River</li>
+                    <li data-id="playthrough_42_6">Shiloh National Military Park (also Mississippi)</li>
+                    <li data-id="playthrough_42_7">Stone River National Battlefield</li>
+                </ul>
+
+                <a name="Texas"></a>
+                <h3>Texas <span id="playthrough_totals_43"></span></h3>
+                <ul>
+                    <li data-id="playthrough_43_1">Alibates Flint Quarries National Monument</li>
+                    <li data-id="playthrough_43_2">Amistad National Recreation Area</li>
+                    <li data-id="playthrough_43_3">Big Bend National Park</li>
+                    <li data-id="playthrough_43_4">Big Thicket National Preserve</li>
+                    <li data-id="playthrough_43_5">Chamizal National Memorial</li>
+                    <li data-id="playthrough_43_6">Fort Davis National Historic Site</li>
+                    <li data-id="playthrough_43_7">Guadalupe Mountains National Park</li>
+                    <li data-id="playthrough_43_8">Lake Meredith National Recreation Area</li>
+                    <li data-id="playthrough_43_9">Lyndon B. Johnson National Historical Park</li>
+                    <li data-id="playthrough_43_10">Padre Island National Seashore</li>
+                    <li data-id="playthrough_43_11">Palo Alto Battlefield National Historical Park</li>
+                    <li data-id="playthrough_43_12">Rio Grande Wild and Scenic River</li>
+                    <li data-id="playthrough_43_13">San Antonio Missions National Historical Park</li>
+                    <li data-id="playthrough_43_14">Waco Mammoth National Monument</li>
+                </ul>
+
+                <a name="Utah"></a>
+                <h3>Utah <span id="playthrough_totals_44"></span></h3>
+                <ul>
+                    <li data-id="playthrough_44_1">Arches National Park</li>
+                    <li data-id="playthrough_44_2">Bryce Canyon National Park</li>
+                    <li data-id="playthrough_44_3">Canyonlands National Park</li>
+                    <li data-id="playthrough_44_4">Capitol Reef National Park</li>
+                    <li data-id="playthrough_44_5">Cedar Breaks National Monument</li>
+                    <li data-id="playthrough_44_6">Golden Spike National Historic Site</li>
+                    <li data-id="playthrough_44_7">Natural Bridges National Monument</li>
+                    <li data-id="playthrough_44_8">Rainbow Bridge National Monument</li>
+                    <li data-id="playthrough_44_9">Timpanogos Cave National Monument</li>
+                    <li data-id="playthrough_44_10">Zion National Park</li>
+                </ul>
+
+                <a name="Vermont"></a>
+                <h3>Vermont <span id="playthrough_totals_45"></span></h3>
+                <ul>
+                    <li data-id="playthrough_45_1">Marsh-Billings-Rockefeller National Historical Park</li>
+                </ul>
+
+                <a name="Virginia"></a>
+                <h3>Virginia <span id="playthrough_totals_46"></span></h3>
+                <ul>
+                    <li data-id="playthrough_46_1">Appomattox Court House National Historical Park</li>
+                    <li data-id="playthrough_46_2">Arlington House, The Robert E. Lee Memorial</li>
+                    <li data-id="playthrough_46_3">Booker T. Washington National Monument</li>
+                    <li data-id="playthrough_46_4">Cedar Creek and Belle Grove National Historical Park</li>
+                    <li data-id="playthrough_46_5">Colonial National Historical Park</li>
+                    <li data-id="playthrough_46_6">Fort Monroe National Monument</li>
+                    <li data-id="playthrough_46_7">Fredericksburg and Spotsylvania National Military Park</li>
+                    <li data-id="playthrough_46_8">George Washington Birthplace National Monument</li>
+                    <li data-id="playthrough_46_9">George Washington Memorial Parkway (also Maryland, Washington DC)</li>
+                    <li data-id="playthrough_46_10">Maggie L. Walker National Historic Site</li>
+                    <li data-id="playthrough_46_11">Manassas National Battlefield Park</li>
+                    <li data-id="playthrough_46_12">Petersburg National Battlefield Park</li>
+                    <li data-id="playthrough_46_13">Prince William Forest Park</li>
+                    <li data-id="playthrough_46_14">Richmond National Battlefield Park</li>
+                    <li data-id="playthrough_46_15">Shenandoah National Park</li>
+                    <li data-id="playthrough_46_16">Wolf Trap National Park for the Performing Arts</li>
+                </ul>
+
+                <a name="Washington"></a>
+                <h3>Washington <span id="playthrough_totals_47"></span></h3>
+                <ul>
+                    <li data-id="playthrough_47_1">Ebbey’s Landing National Historical Reserve</li>
+                    <li data-id="playthrough_47_2">Fort Vancouver National Historic Site (Washington, Oregon)</li>
+                    <li data-id="playthrough_47_3">Lake Chelan National Recreation Area</li>
+                    <li data-id="playthrough_47_4">Lake Roosevelt National Recreation Area</li>
+                    <li data-id="playthrough_47_5">Mount Rainier National Park</li>
+                    <li data-id="playthrough_47_6">North Cascades National Park</li>
+                    <li data-id="playthrough_47_7">Olympic National Park</li>
+                    <li data-id="playthrough_47_8">Ross Lake National Recreation Area</li>
+                    <li data-id="playthrough_47_9">San Juan Island National Historical Park</li>
+                    <li data-id="playthrough_47_10">Whitman Mission National Historic Site</li>
+                </ul>
+
+                <a name="Washington_DC"></a>
+                <h3>Washington DC <span id="playthrough_totals_48"></span></h3>
+                <ul>
+                    <li data-id="playthrough_48_1">Belmont-Paul Women’s Equality National Monument</li>
+                    <li data-id="playthrough_48_2">Carter G. Woodson Home National Historic Site</li>
+                    <li data-id="playthrough_48_3">Constitution Gardens</li>
+                    <li data-id="playthrough_48_4">Dwight D. Eisenhower Memorial</li>
+                    <li data-id="playthrough_48_5">Ford’s Theatre National Historic Site</li>
+                    <li data-id="playthrough_48_6">Franklin D. Roosevelt Memorial</li>
+                    <li data-id="playthrough_48_7">Frederick Douglass National Historic Site</li>
+                    <li data-id="playthrough_48_8">Korea War Veterans Memorial</li>
+                    <li data-id="playthrough_48_9">Lincoln Memorial</li>
+                    <li data-id="playthrough_48_10">Lyndon Baines Johnson Memorial Grove on the Potomac</li>
+                    <li data-id="playthrough_48_11">Martin Luther King, Jr. Memorial</li>
+                    <li data-id="playthrough_48_12">Mary McLeod Bethune Council House National Historic Site</li>
+                    <li data-id="playthrough_48_13">National Capital Parks</li>
+                    <li data-id="playthrough_48_14">National Mall</li>
+                    <li data-id="playthrough_48_15">Pennsylvania Avenue National Historic Site</li>
+                    <li data-id="playthrough_48_16">Rock Creek Park</li>
+                    <li data-id="playthrough_48_17">Theodore Roosevelt Island</li>
+                    <li data-id="playthrough_48_18">Thomas Jefferson Memorial</li>
+                    <li data-id="playthrough_48_19">Vietnam Veterans Memorial</li>
+                    <li data-id="playthrough_48_20">Washington Monument</li>
+                    <li data-id="playthrough_48_21">White House</li>
+                    <li data-id="playthrough_48_22">World War I Memorial</li>
+                    <li data-id="playthrough_48_23">World War II Memorial</li>
+                </ul>
+
+                <a name="West_Virginia"></a>
+                <h3>West Virginia <span id="playthrough_totals_49"></span></h3>
+                <ul>
+                    <li data-id="playthrough_49_1">Bluestone National Scenic River</li>
+                    <li data-id="playthrough_49_2">Gauley River National Recreation Area</li>
+                    <li data-id="playthrough_49_3">Harpers Ferry National Historical Park</li>
+                    <li data-id="playthrough_49_4">New River Gorge National River</li>
+                </ul>
+
+                <a name="Wisconsin"></a>
+                <h3>Wisconsin <span id="playthrough_totals_50"></span></h3>
+                <ul>
+                    <li data-id="playthrough_50_1">Apostle Islands National Lakeshore</li>
+                    <li data-id="playthrough_50_2">Saint Croix National Scenic Riverway (also Minnesota)</li>
+                </ul>
+
+                <a name="Wyoming"></a>
+                <h3>Wyoming <span id="playthrough_totals_51"></span></h3>
+                <ul>
+                    <li data-id="playthrough_51_1">Devils Tower National Monument</li>
+                    <li data-id="playthrough_51_2">Fort Laramie National Historic Site</li>
+                    <li data-id="playthrough_51_3">Fossil Butte National Monument</li>
+                    <li data-id="playthrough_51_4">Grand Teton National Park</li>
+                    <li data-id="playthrough_51_5">John D. Rockefeller Memorial Parkway</li>
+                    <li data-id="playthrough_51_6">Yellowstone National Park (also Idaho, Montana)</li>
+                </ul>
+
+                <a name="American_Samoa"></a>
+                <h3>American Samoa <span id="playthrough_totals_52"></span></h3>
+                <ul>
+                    <li data-id="playthrough_52_1">National Park of American Samoa</li>
+                </ul>
+
+                <a name="Guam"></a>
+                <h3>Guam <span id="playthrough_totals_53"></span></h3>
+                <ul>
+                    <li data-id="playthrough_53_1">War in the Pacific National Historical Park</li>
+                </ul>
+
+                <a name="Puerto_Rico"></a>
+                <h3>Puerto Rico <span id="playthrough_totals_54"></span></h3>
+                <ul>
+                    <li data-id="playthrough_54_1">San Juan National Historic Site</li>
+                </ul>
+
+                <a name="Virgin_Islands"></a>
+                <h3>Virgin Islands <span id="playthrough_totals_55"></span></h3>
+                <ul>
+                    <li data-id="playthrough_55_1">Buck Island Reef National Monument</li>
+                    <li data-id="playthrough_55_2">Christiansted National Historic Site</li>
+                    <li data-id="playthrough_55_3">Salt River Bay National Historical Park and Ecological Preserve</li>
+                    <li data-id="playthrough_55_4">Virgin Islands Coral Reef National Monument</li>
+                    <li data-id="playthrough_55_5">Virgin Islands National Park</li>
+                </ul>
+
+            </div>
+
+            <div class="tab-pane" id="tabHelp">
+
+                <h2>Help</h2>
+
+                <h3>How does the checklist status get saved?</h3>
+                <p>
+                    It gets saved to the local storage in your browser and not to any database or API. So if you are
+                    clearing your browser cache make sure not to delete the site data or your checklists will
+                    get reset. At some point in the future I might hook it up to an API.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
