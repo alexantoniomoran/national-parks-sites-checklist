@@ -42,8 +42,9 @@
     		</div>
     		<div class="collapse navbar-collapse" id="nav-collapse">
 	            <ul class="nav navbar-nav">
-	                <li class="active"><a href="#tabSites" data-toggle="tab">Sites</a></li>
-	                <li><a href="#tabHelp" data-toggle="tab">Help</a></li>
+	                <li class="active"><a href="#tabChecklist" data-toggle="tab">Checklist</a></li>
+                    <li><a href="#tabSites" data-toggle="tab">Sites</a></li>
+                    <li><a href="#tabHelp" data-toggle="tab">Help</a></li>
 	            </ul>
             </div>
         </div>
@@ -51,28 +52,8 @@
     <div class="container">
         <div id="intro">
             <p>
-                The following is a checklist of the 423 Nation Park Sites. It includes:
+                The following is a checklist of the 423 Nation Park Sites as of <strong>08/18/21</strong>
             </p>
-            <p><em>63 US National Parks</em></p>
-            <p><em>85 US National Monuments</em></p>
-            <p><em>19 US National Preserves</em></p>
-            <p><em>59 US National Historical Parks</em></p>
-            <p><em>75 US National Historic Sites</em></p>
-            <p><em>1 US International Historic Site</em></p>
-            <p><em>4 US National Battlefield Parks</em></p>
-            <p><em>9 US National Military Parks</em></p>
-            <p><em>11 US National Battlefields</em></p>
-            <p><em>1 National Battlefield Site</em></p>
-            <p><em>32 National Memorials</em></p>
-            <p><em>18 National Recreation Areas</em></p>
-            <p><em>10 National Seashores</em></p>
-            <p><em>3 National Lake Shores</em></p>
-            <p><em>5 National Rivers</em></p>
-            <p><em>10 National Wild and Scenic Rivers and Riverways</em></p>
-            <p><em>2 National Reserves</em></p>
-            <p><em>4 National Parkways</em></p>
-            <p><em>3 National Scenic Trails</em></p>
-            <p><em>11 other sites including the National Mall and National Capital Parks</em></p>
         </div>
 
         <div class="tab-content">
@@ -86,7 +67,7 @@
 	        </div>
 
 
-            <div class="tab-pane active" id="tabSites">
+            <div class="tab-pane active" id="tabChecklist">
 
                 <h2>Checklist<span id="playthrough_overall_total"></span></h2>
                 <ul>
@@ -850,6 +831,37 @@
 
             </div>
 
+            <div class="tab-pane" id="tabSites">
+
+                <h2>Included National Park Sites:</h2>
+
+                <br />
+
+                <p><em>63 US National Parks</em></p>
+                <p><em>85 US National Monuments</em></p>
+                <p><em>19 US National Preserves</em></p>
+                <p><em>59 US National Historical Parks</em></p>
+                <p><em>75 US National Historic Sites</em></p>
+                <p><em>1 US International Historic Site</em></p>
+                <p><em>4 US National Battlefield Parks</em></p>
+                <p><em>9 US National Military Parks</em></p>
+                <p><em>11 US National Battlefields</em></p>
+                <p><em>1 National Battlefield Site</em></p>
+                <p><em>32 National Memorials</em></p>
+                <p><em>18 National Recreation Areas</em></p>
+                <p><em>10 National Seashores</em></p>
+                <p><em>3 National Lake Shores</em></p>
+                <p><em>5 National Rivers</em></p>
+                <p><em>10 National Wild and Scenic Rivers and Riverways</em></p>
+                <p><em>2 National Reserves</em></p>
+                <p><em>4 National Parkways</em></p>
+                <p><em>3 National Scenic Trails</em></p>
+                <p><em>11 other sites including the National Mall and National Capital Parks</em></p>
+
+                <br />
+
+            </div>
+
             <div class="tab-pane" id="tabHelp">
 
                 <h2>Help</h2>
@@ -858,7 +870,15 @@
                 <p>
                     It gets saved to the local storage in your browser and not to any database or API. So if you are
                     clearing your browser cache make sure not to delete the site data or your checklists will
-                    get reset. At some point in the future I might hook it up to an API.
+                    get reset
+                </p>
+
+                <h3>How was this site made?</h3>
+                <p>
+                    I forked a branch off of a very useful
+                    <a href="https://rejna.github.io/dark-souls-2-sotfs-cheat-sheet/">Dark Souls 2</a>
+                    checklist I found- I just repurposed the code and filled all of the National Park Site data
+                    in from Wikipedia
                 </p>
 
             </div>
